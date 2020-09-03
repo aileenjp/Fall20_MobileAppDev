@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4640" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="daVinci" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leonardo da Vinci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrS-YZ-wUL">
+                                <rect key="frame" x="88.5" y="16" width="143" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="UAR-Td-EUr">
+                                <rect key="frame" x="46.5" y="61.5" width="227" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-XH-n7R">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
+                                        <state key="normal" title="Paintings"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SU6-np-Nox"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-EN-4wq">
+                                        <rect key="frame" x="163" y="0.0" width="64" height="30"/>
+                                        <state key="normal" title="Drawings"/>
+                                        <connections>
+                                            <action selector="chooseArt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DU1-Kh-J6v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daVinci" translatesAutoresizingMaskIntoConstraints="NO" id="pRl-6F-f1T">
+                                <rect key="frame" x="30" y="116.5" width="260" height="353.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="440" id="Urm-wI-YD6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="598" id="dAM-PP-hjj"/>
+                                    <constraint firstAttribute="width" secondItem="pRl-6F-f1T" secondAttribute="height" multiplier="220:299" id="vXG-mo-r3s"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UAR-Td-EUr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6C-OE-m8f"/>
+                            <constraint firstItem="pRl-6F-f1T" firstAttribute="top" secondItem="UAR-Td-EUr" secondAttribute="bottom" constant="25" id="ERp-WK-vTB"/>
+                            <constraint firstItem="pRl-6F-f1T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KOQ-YX-DjW"/>
+                            <constraint firstItem="39D-N6-HSP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pRl-6F-f1T" secondAttribute="bottom" constant="10" id="SFk-xe-rCK"/>
+                            <constraint firstItem="HrS-YZ-wUL" firstAttribute="top" secondItem="39D-N6-HSP" secondAttribute="top" constant="16" id="YDf-fZ-h5m"/>
+                            <constraint firstItem="HrS-YZ-wUL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7t-Ub-Rnx"/>
+                            <constraint firstItem="pRl-6F-f1T" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" constant="-20" id="g78-Aj-RHx"/>
+                            <constraint firstItem="UAR-Td-EUr" firstAttribute="top" secondItem="HrS-YZ-wUL" secondAttribute="bottom" constant="25" id="z6b-Fi-9D4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="39D-N6-HSP"/>
+                    </view>
+                    <connections>
+                        <outlet property="artImage" destination="pRl-6F-f1T" id="Wy2-tR-wmt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="daVinci" width="146.66667175292969" height="199.33332824707031"/>
+    </resources>
+</document>
