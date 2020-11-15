@@ -26,7 +26,7 @@ class TacoActivity : AppCompatActivity() {
         tacoShopName?.let { Log.i("shop received", it) };
         tacoShopUrl?.let { Log.i("url received", it) };
 
-        tacoShopName?.let {tacoShopTextView.text = "You should get tacos at $tacoShopName "}
+        tacoShopName?.let {tacoShopTextView.text = getString(R.string.tacoShopMessage) + " $tacoShopName"}
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             loadWebSite()
