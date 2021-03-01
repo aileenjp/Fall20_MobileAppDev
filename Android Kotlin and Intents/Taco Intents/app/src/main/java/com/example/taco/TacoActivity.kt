@@ -9,6 +9,7 @@ import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_taco.*
 import kotlinx.android.synthetic.main.content_taco.*
 
 class TacoActivity : AppCompatActivity() {
@@ -49,13 +50,11 @@ class TacoActivity : AppCompatActivity() {
 //            action = Intent.ACTION_VIEW;
 //            data = tacoShopUrl?.let{Uri.parse(tacoShopUrl)};
 //        }
-
+//
 //        val intent = Intent(Intent.ACTION_VIEW, tacoShopUrl?.let{Uri.parse(tacoShopUrl)})
 
-        // Verify that the intent will resolve to an activity
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
+        //start the activity
+        startActivity(intent)
     }
 
     override fun onBackPressed() {

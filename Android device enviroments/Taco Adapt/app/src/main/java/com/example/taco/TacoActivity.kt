@@ -52,10 +52,8 @@ class TacoActivity : AppCompatActivity() {
 
 //        val intent = Intent(Intent.ACTION_VIEW, tacoShopUrl?.let{Uri.parse(tacoShopUrl)})
 
-        // Verify that the intent will resolve to an activity
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
+        //start the activity
+        startActivity(intent)
     }
 
     override fun onBackPressed() {
